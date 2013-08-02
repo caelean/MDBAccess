@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MongoDB Access</title>
+
+    <!-- Load styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/start/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.contextMenu/jquery.contextMenu.css" />
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.class.min.js"></script>
+    <script type="text/javascript" src="js/jquery.contextMenu.js"></script>
+    <script type="text/javascript" src="js/jquery.timer.js"></script>
+
+    <script type="text/javascript" src="js/ndn-js.min.js"></script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <h1><img src="MongoDB.png" width="225" height="75"><grey style="font-size:45px"><sub>Web Access</sub></grey></h1>
+      <h2 id="folderName"></h2>
+      
+<!-- 
+      <nav>
+        <ul>
+          <li><a class="needs-get-url" href="#folderHistory">Recent actions</a></li>
+          <li><a class="needs-get-url" href="#fileList">All files</a></li>
+          <li><a class="ajax-action" id="reload-button">Reload current view</a></li>
+
+        </ul>
+      </nav>
+ -->
+    </header>
+
+    <article>
+      <div id="content" class="hidden">
+      </div>
+
+      <content-nav id="content-nav" style="display: none">
+        <ul>
+          <li><a id="get-less" class="ajax-action">&lt;&lt; Previous</a></li>
+          <li><a id="get-more" class="ajax-action">Next &gt;&gt;</a></li>
+        </ul>
+
+      </content-nav>
+
+      <div class="hidden" id="loader">
+        <img src="load.gif" />
+      </div>
+
+      <red class="hidden" id="error">
+      </red>
+
+      <pre class="hidden" id="json">
+      </pre>
+
+
+
+      <div id="no-support">
+        <!-- This block will be removed if jQuery has been loaded -->
+        <h1><green>Oops!</green></h1>
+        <h3><grey>It looks like you're using a browser that is <green>not supported</green>.</grey></h3>
+      </div>
+    </article>
+
+    <footer>
+      <grey>Powered by </grey><a target="_blank" href="http://github.com/named-data/ndn-js"><green>NDN</green><grey>.JS</grey></a>
+    </footer>
+
+    <script src="detect.js"></script>
+    <script type="text/javascript" src
+    ="chronoshare-helpers.js"></script>
+    <script type="text/javascript" src="chronoshare-navigation.js"></script>
+    <script type="text/javascript" src="chronoshare.js"></script>
+    <script type="text/javascript">
+      $(window).ready (function () {
+         if (detect ()) {
+             $("#no-support").remove ();
+             $("#content").removeClass ("hidden");
+         }
+      });
+    </script>
+  </body>
+</html>
