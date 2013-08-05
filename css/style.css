@@ -222,6 +222,8 @@ tfoot {
 }
 .modified-by {
     width: 1%;
+    whitespace: nowrap;
+
 }
 
 pre {
