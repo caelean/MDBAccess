@@ -169,7 +169,7 @@ RestPipelineClosure ("FilesClosure", {}, {
 	
 			row.append ($("<td />", { "class": "filename border-left" })
 				.text (data.data[i])	
- 			.prepend ($("<img />", { "src": imgpath})));
+ 				.prepend ($("<img />", { "src": imgpath})));
 			
  			if(data.constituents[i].type !== 0)
  			{

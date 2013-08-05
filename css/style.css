@@ -214,14 +214,14 @@ tfoot {
     width: 13%;
 }
 .size {
-    width: 23%;
+    width: 22%;
     whitespace: nowrap;
 }
 .modified {
     width: 20%;
 }
 .modified-by {
-    width: 0%;
+    width: 1%;
 }
 
 pre {
