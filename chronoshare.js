@@ -5,7 +5,7 @@ $.Class ("ChronoShare", { },
      init: function () {
          this.files = new Name ("/ndn/ucla.edu/irl/caelean/mongo-query/simple-fetch");
 
-         this.ndn = new NDN ({host:"127.0.0.1"});
+         this.ndn = new NDN ();
 	     this.ndn.verify = false;
      },
 
